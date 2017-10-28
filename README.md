@@ -12,15 +12,24 @@ This repository displays my own homework solutions to the course and is not for 
 
 ----------------
 There might be unreasonable designs in the codes. Generally the quality of codes improves as level goes up. It is often the case that files in following levels are refined and updated versions of files in preceding levels.
+
 ----------------
 INDEX
 ----------------
-Level 1   C Basics I\n
+Level 1   C Basics I
+
 Level 2   C Basics II
+
 Level 3   Introduction to Classes
+
 Level 4   Function and Operator Overloading, Dynamic Memory Management and Namespaces
+
 Level 5   Inheritance, Polymorphism and Exception Handling with Self-Made Classes
+
 Level 6   Templates and Generic Programming
+
 Level 7   Overview of the Standard Template Library
+
 Level 8   Introduction to Boost C++ Libraries
+
 Level 9   Introductory Computational Finance -- BSM Option Pricing Model: Exact Solutions, Monte Carlo Method and Finite Difference Method
