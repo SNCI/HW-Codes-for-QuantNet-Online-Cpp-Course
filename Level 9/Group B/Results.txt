@@ -1,0 +1,16 @@
+B
+a)
+The formulae are incorporated in class PerpAmeOption.
+The two private functions CallPrice() and PutPrice() are programmed seperately as required.
+
+They are made private because it is not necessary for the user to call different functions 
+for different types of option. Also, as type is one of the innate parameter of a certain option,
+it is natual to just call Price() to calculate its price.
+
+b)
+result: call:18.5035, put: 3.03106
+No accuracy issue. RNG is not involved.
+
+c)
+Run the programme and the results are on the console.
+It's possible to change the parameters through user input.

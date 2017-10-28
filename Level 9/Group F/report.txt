@@ -1,0 +1,6 @@
+The excels are outputs of project FDM with differnt bathces as input.The particular outputs are highlighted in charts, with the exact results beside them. For batch 1-3, the results are pretty close to those exact ones.
+
+For batch 4,I either got 65535 or the inaccurate result in xls. I tried to set N=250000 or N=300000(as required in the relation: k~O(h^2)), but this always ended up with 65535. 
+After searching the threads I understood that 65535 is likely to be an overflow issue. However I'm not quite sure about how I can solve it. The professor suggested using "unsigned long long int", but it would not work if I only switch data type of N and J to "unsigned long long int"(actually I tried and failed, 65535 again), since the functions and data member of objects accept int/long as input. If I were to change all the relevant input data types to "unsigned long long int", that would be huge work...
+
+Can you give me any suggestions? Thanks.

@@ -1,0 +1,9 @@
+a)
+The functions are incorporated into the code. So are the namespaces containing batch data. They are just above the main function.
+
+b)
+As far as I see it, the results are the same as in Group C, so long as N and Nsim are identical in each trial. This indicates the random number used in trials follows a particular pattern.(I understand they are not really random, but I don't expect them to behave exactly the same in each trial with same inputs).
+
+SE and SD funcitons does not affect outcomes.
+
+Generally, SD is relatively stable for each type of options with particular properties,whilst SE goes down as Nsim goes up.

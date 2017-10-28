@@ -1,0 +1,39 @@
+A.1
+a)
+results:
+Batch1: result: call:2,13337, put: 5.84628
+Batch2: result: call:7.96557, put:7.96557
+Batch3: result: call:0.204058, put:4.07326
+Batch4: result: call:92.1757, put:1.2475
+The differences in accuracy between these results and those in the homework are possibly
+because of the use of different normal distribution pdf and cdf.
+Boost version is used in this programme.
+
+b)
+All 4 batches pass the test.
+The numbers are exactly the same as those in a).
+In TestOption.cpp, comment out different namespaces to test different batches.
+
+c)
+The results are the same as those in a).
+Declarations of functions with structs as argument are in OptionElement.h.
+Function bodies are at the bottom of TestOption.cpp.
+
+d)
+Run the project and results are on the console.
+
+e)
+Run the project and results are on the console.
+
+A.2
+a)
+results: call:0.594629, put:-0.356601
+The differences in accuracy between these results and those in the homework are possibly
+because of the use of different normal distribution pdf and cdf.
+Boost version is used in this programme.
+
+b)
+Run the project and results are on the console.
+
+c)
+Run the project and results are on the console.

@@ -1,0 +1,137 @@
+b)
+The results are listed below.
+
+Generally, the larger N and Nsim are, the more accurate the result. However, there is no guarantee that larger N and Nsim will definately renders better results. Sometimes the accuracy goes down as N or Nsim goes up. Also, there is no significant improvement in accuracy when N augments from 500 to 10000(see 5 and 7). Nor is there visible change in accuracy when Nsim increase from 100000 to 5000000 (for call option, put option get 2 decimal places accuracy). 
+Per the accuracy, trial 5) with N=5000 and Nsim=100000 and trial 8) with N=500 and Nsim=5000000 both satisfy the requirement.
+
+The simulation result is generally more accurate for call prices.
+
+Didn't carry out trials of O(10^7) because they would take too long time. Actually N=500, Nsim=5000000 takes more than 4 hours per trial for call/put on my computer.
+
+Batch 1:
+Accurate result:call:2,13337, put: 5.84628
+
+1)N=100,Nsim=50000
+Put= 5.88104;
+Call= 2.12126; SD= 4.41977; SE= 0.0197658
+
+2)N=100,Nsim=100000
+Put= 5.8726;
+Call= 2.13295; SD= 4.4403; SE= 0.0140415
+
+3)N=500,Nsim=100000
+Put= 5.83729;
+Call= 2.14885; SD= 4.46656; SE= 0.0141245
+
+4)N=500,Nsim=500000
+Put= 5.85758;Call= 2.12824;
+(didin't carry out this trial after SD and SE functions are incorporated into the code)
+
+5)N=1000,Nsim=100000
+Put= 5.86757;Call= 2.13874;
+(didin't carry out this trial after SD and SE functions are incorporated into the code)
+
+6)N=5000,Nsim=100000
+Put= 5.84083;Call= 2.13611;
+(didin't carry out this trial after SD and SE functions are incorporated into the code)
+¡¾This is almost as accurate as 8)¡¿
+
+7)N=10000,Nsim=100000
+Put= (didn't carry out this trial);Call= 2.14927;
+(didin't carry out this trial after SD and SE functions are incorporated into the code)
+¡¾A blunt exception here, accuracy goes down as number of meshes in time goes up.¡¿
+
+8)N=500,Nsim=5000000
+Put= 5.84206; SD= 5.9259;SE=0.00264996
+Call= 2.13419;SD= 4.4276;SE= 0.00198008;
+¡¾Two decimal places accurate here¡¿
+
+
+-----------------------------------------------------
+
+Batch 2:
+Accurate result:call:7.96557, put:7.96557
+
+The results of this batch is more volatile than those of batch 1, but the general trends are almost the same. I carried out 8) for put and 1)-3) for call two times (made adjustments to SD and SE functions). The strange thing was that the two trials rendered exactly the same results for prices. I am wondering if this is because of roundabout problem or is due to certain behavior pattern of the RNG.
+
+Besides, trend of call price in trial 2), 3) and 7) are seemingly abnormal, to which I could not figure out a reasonable explanation. Since trials with identical conditions would end up with identical results, I ruled out the possibility that this phenomenon occured out of pure chance. The accuracy strictly goes down as N gets bigger. However for put price, the trend is the different(normal trend). This suggest there could be different optimal combinations of N and Nsim for put and call. Also, put and call price seems to have opposite movement(in a particular trial, if put price is larger than exact price, call price would be smaller than exact price, and vise versa.)
+
+The simulation results are generally more accurate for call prices.
+
+1)N=100,Nsim=50000
+Put= 8.03004;
+Call=7.92938; SD= 13.1344; SE= 0.0587386
+
+2)N=100,Nsim=100000
+Put= 8.01715;
+Call=7.96187; SD= 13.183; SE= 0.0416881
+
+3)N=500,Nsim=100000
+Put= 7.95242;
+Call=8.0094 ; SD= 13.2491; SE= 0.0418746
+
+4)N=500,Nsim=500000
+Put= 7.98069;Call=7.94493 ;
+(didin't carry out this trial after SD and SE functions are incorporated into the code)
+
+5)N=1000,Nsim=100000
+Put= 7.99353;Call= 7.9618 ;
+(didin't carry out this trial after SD and SE functions are incorporated into the code)
+
+6)N=5000,Nsim=100000
+Put= (didin't carry out this trial);Call= 7.98338;
+(didin't carry out this trial after SD and SE functions are incorporated into the code)
+
+7)N=10000,Nsim=100000
+Put= 7.93787;Call= 8.02154;
+(didin't carry out this trial after SD and SE functions are incorporated into the code)
+
+8)N=500,Nsim=5000000
+Put= 7.95846;SD= 10.3996;SE= 0.00465086;
+Call= 7.96951;(did not carry out this trial after adjustments to SD and SE functions)
+¡¾The accuracy is still not satisfying. OK for call, though.¡¿
+
+-----------------------------------------------------
+
+c)
+Stress Test
+
+Results generally more accurate for put prices.
+
+From the first 4 results, it seems to be more difficult for the simulations to get accurate results in Batch 4 than in Batch 1 and 2. The 5000000 times simulation only gives one decimal place accurate for put option, and is not accurate at all for call(call price is more volatile). Also, the speed of convergence is seemingly slower in batch 4 than in the other two batches(there is no significant improvement in accuracy from 100000 to 5000000 times of trial). It is possible that increasing Nsim to O(10^7) or even larger will render two decimal places accurate for put and unit digit accurate for call.
+
+Since T=30 in batch 4 ,which is much larger than that of batch 1 and 2, N might have a more significant influence on accuracy than Nsim.
+
+The above is verified by comparing 1)5) and 1)4) for call option(although the validity is slightly impaired by the difference in the percentage at which N and Nsim increases in the two groups). Also there is a visible decrease in volatility for call option as N goes up. However, no apparent improvement for put price can be seen.
+
+It's highly likely that trial 6) would render one-or-two-decimal-place accuracy for call, however it would be too time-consuming if I ever try to carry the experiment out.
+Trial 5) takes me 11 hours to complete.
+
+Put price may need Nsim=O(10^7) or Nsim=O(10^8) to reach the required accuracy.
+
+Batch 4:
+Accurate result:call:92.1757, put:1.2475
+
+1)N=500, Nsim=100000
+Put=1.25552; SD=0.223297; SE= 0.000706127
+Call=93.0212; SD=31.6893; SE= 0.10021
+
+2)N=500,Nsim=500000
+Put=1.25896; SD=0.223555; SE= 0.000316154
+Call=91.7952; SD=33.7117; SE=0.0476755
+
+3)N=500,Nsim=1000000
+Put=1.25418; SD= 0.223289; SE=0.000223289
+Call=91.9222; SD= 34.6141; SE=0.0346141
+
+4)N=500,Nsim=5000000
+Put=1.2538; SD=0.223135; SE=9.97892e-005
+Call=91.8413; SD=33.8539; SE= 0.0151399
+
+5)N=30000, Nsim=100000
+Put=1.23709; SD= 0.221494; SE= 0.000700426;
+Call=92.2201; SD=28.4112; SE=0.0898442
+
+6)N=50000, Nsim=1000000
+Put
+Call=
