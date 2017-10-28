@@ -1,5 +1,7 @@
 # HW-Codes-for-QuantNet-Online-Cpp-Course
 
+!!! DO NOT DISTRIBUTE THESE CODES !!!
+
 A collection of self-made solotions to exercises of the online course C++ Programming for Financial Engineering
 
 The source of the exercises is C++ Programming for Financial Engineering on www.quantnet.com
