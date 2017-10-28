@@ -15,7 +15,7 @@ There might be unreasonable designs in the codes. Generally the quality of codes
 ----------------
 INDEX
 ----------------
-Level 1   C Basics I
+Level 1   C Basics I\n
 Level 2   C Basics II
 Level 3   Introduction to Classes
 Level 4   Function and Operator Overloading, Dynamic Memory Management and Namespaces
